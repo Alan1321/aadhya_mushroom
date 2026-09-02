@@ -32,7 +32,8 @@ export const business = {
   hours: '',
 
   links: {
-    facebook: 'https://www.facebook.com/people/Aadhya-Mushroom-Seeds/61576620662425/',
+    // Confirmed by the owner 2026-09-02.
+    facebook: 'https://www.facebook.com/profile.php?id=61589683476172',
     maps: 'https://www.google.com/maps/place/Aadhya+mushroom+seeds/@27.6642407,85.3731124,55m/data=!3m1!1e3!4m6!3m5!1s0x39eb1b00327cc473:0x7cb80df2c482f2b6!8m2!3d27.6642843!4d85.3732005!16s%2Fg%2F11n9l2h08n',
   },
 }
