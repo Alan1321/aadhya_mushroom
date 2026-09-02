@@ -290,13 +290,88 @@ a:hover {
   color: var(--rust);
 }
 
+/* hamburger — only rendered as a control on narrow screens */
+.nav__toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--green-700);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--green-700);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav__bars,
+.nav__bars::before,
+.nav__bars::after {
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.nav__bars {
+  position: relative;
+}
+
+.nav__bars::before,
+.nav__bars::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.nav__bars::before {
+  top: -5px;
+}
+
+.nav__bars::after {
+  top: 5px;
+}
+
 @media (max-width: 720px) {
-  .nav__link {
+  .brand__sub {
     display: none;
   }
 
-  .brand__sub {
+  .nav__toggle {
+    display: inline-flex;
+  }
+
+  /* the link row becomes a panel dropping out of the sticky header */
+  .nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.25rem var(--gutter) 1.25rem;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__link {
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .nav__cta {
+    margin-top: 1.25rem;
   }
 }
 
